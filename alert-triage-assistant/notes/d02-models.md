@@ -197,6 +197,15 @@ n = client.messages.count_tokens(
 
 **Cost per quality point:** Haiku $0.06 for 3.0 · Sonnet low $0.25 for 4.7 · Opus $0.72 for 5.0. The jump from Haiku to Sonnet buys 1.7 points for about $0.19 more; Sonnet to Opus buys 0.3 points for about $0.47 more.
 
+## Side quest: fast mode
+
+Source: [Fast mode → How fast mode works](https://platform.claude.com/docs/en/build-with-claude/fast-mode#how-fast-mode-works), as extracted in the Day 2 guide (verified 2026-09-26; not re-checked today).
+
+- Same weights, up to **2.5× output tokens per second**. It helps output speed, **not** time to first token.
+- Set `speed="fast"` with beta header `fast-mode-2026-02-01`. Available on Opus 5.5 / 5 / 4.8 only, and **not** on Bedrock, Google Cloud, Foundry or the Batches API.
+- Opus 5.5 fast costs **$8 / $40** per MTok, 2× the standard $4 / $20.
+- For triage: it would shrink the analyst chat's wait on Opus, but at 2× price; Sonnet low already gives 2.8s at a fraction of the cost.
+
 ## ADR-001 Model per task
 
 **Status:** accepted for the lab, to be re-tested (see below). **Date:** 2026-10-05. **Evidence:** 40 calls on 10 synthetic alerts, one run each, graded by Claude (§4).
@@ -247,8 +256,16 @@ n = client.messages.count_tokens(
 
 ## Reflection
 
-- Where did a cheaper configuration match the expensive one, and where did it clearly lose?
-- Which triage decisions would you never route to the cheapest model, whatever the evals say?
+**Where did a cheaper configuration match the expensive one, and where did it clearly lose?**
+It matched on clear-cut patterns: for the structuring alerts (0001, 0008) Haiku gave the same high risk and typology as Opus. Sonnet `low` also matched Sonnet `high` (same latency and quality), so effort bought nothing with thinking off. It clearly lost on facts and calibration: Haiku read MT as Mongolia, called the Netherlands high-risk, and overcalled two medium alerts as high.
+
+**Financial-crime angle: which triage decisions would you never route to the cheapest model, whatever the evals say?**
+- Closing or dismissing an alert
+- Sanctions and high-risk-jurisdiction decisions
+- SAR/STR filing decisions
+- PEP and adverse-media cases
+
+(The first part of the first answer is yours; the "clearly lost" part is from the graded results in §4.)
 
 ## ✅ Done when
 
