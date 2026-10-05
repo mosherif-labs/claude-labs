@@ -1,0 +1,221 @@
+model,effort,alert,rule,est_in,in,out,thinking,stop,secs,usd,answer,quality
+claude-haiku-4-5-20251001,default,ALRT-0001,structuring,177,177,61,0,end_turn,1.33,0.00048,"**risk**: high
+
+**typology**: Structuring (Smurfing)
+
+**rationale**: Five cash deposits deliberately kept below the $10,000 CTR threshold within 5 days across multiple branches exhibits classic structuring behavior designed to evade reporting requirements.",4
+claude-haiku-4-5-20251001,default,ALRT-0002,rapid_movement,162,162,81,0,end_turn,1.45,0.00057,"**Risk:** High
+
+**Typology:** Rapid Movement / Placement & Layering (Potential Money Laundering)
+
+**Rationale:** Large incoming wire ($84,942) immediately moved to high-risk jurisdiction (Panama) within 24 hours with account balance depleted is classic structuring/layering behavior consistent with ML/TF activity.",3
+claude-haiku-4-5-20251001,default,ALRT-0003,high_risk_corridor,171,171,79,0,end_turn,1.44,0.00057,"**Risk:** High
+
+**Typology:** Sanctions/Jurisdiction Risk – High-Risk Corridor
+
+**Rationale:** Multiple outbound wires totaling $81K+ CAD to Mongolia (high-risk corridor) with no documented business justification represents a potential sanctions evasion or unauthorized jurisdiction exposure requiring immediate investigation and customer due diligence.",2
+claude-haiku-4-5-20251001,default,ALRT-0004,large_cash,146,146,81,0,end_turn,1.55,0.00055,"**Risk:** Medium
+
+**Typology:** Structuring/Cash Threshold Breach
+
+**Rationale:** A single cash deposit of CAD 45,153 significantly exceeds the customer's expected monthly volume (15,000), indicating potential structuring behavior or unusual cash activity, though domestic origin/destination and lack of cross-border movement mitigates risk.",3
+claude-haiku-4-5-20251001,default,ALRT-0005,dormant_reactivation,156,156,90,0,end_turn,1.49,0.00061,"**Risk:** Medium
+
+**Typology:** Dormant Account Reactivation / Potential Money Laundering
+
+**Rationale:** A 14+ month inactive account suddenly conducting a ~$61.5K CAD transfer to Cyprus (high-risk jurisdiction) warrants medium-risk escalation for potential layering activity, though lack of suspicious pattern repetition and reasonable amount prevent high-risk classification.",3
+claude-haiku-4-5-20251001,default,ALRT-0006,round_amounts,164,164,93,0,end_turn,1.52,0.00063,"**TRIAGE RESULT:**
+
+- **Risk Level:** Medium
+- **Typology:** Structuring / Trade-Based Money Laundering (TBML)
+- **Rationale:** Repeated round-amount transfers to higher-risk jurisdiction (Netherlands) with vague documentation suggests potential layering activity or invoice manipulation, though consistent $50K amounts and established US-NL corridor mitigate acute risk.",2
+claude-haiku-4-5-20251001,default,ALRT-0007,third_party_funding,169,169,84,0,end_turn,1.39,0.00059,"**Risk:** High
+
+**Typology:** Structuring / Layering with Third-Party Funding
+
+**Rationale:** Multiple unrelated third parties from a higher-risk jurisdiction (AE) funding a single account followed by immediate consolidation into one large purchase exhibits classic layering behavior and suggests potential source-of-funds obfuscation to circumvent AML controls.",4
+claude-haiku-4-5-20251001,default,ALRT-0008,structuring,172,172,67,0,end_turn,1.15,0.00051,"**Risk:** High
+
+**Typology:** Structuring (Smurfing)
+
+**Rationale:** Multiple cash deposits deliberately kept below the $10,000 CAD reporting threshold across different branches within a short timeframe is a classic structuring pattern designed to evade AML reporting requirements.",4
+claude-haiku-4-5-20251001,default,ALRT-0009,rapid_movement,162,162,79,0,end_turn,1.51,0.00056,"**Risk:** HIGH
+
+**Typology:** Rapid Movement / Funds Layering
+
+**Rationale:** High-risk pattern combining swift fund rotation (incoming wire immediately transferred within 24 hours), cross-border movement to jurisdictional neighbor, and depletion to near-zero balance—consistent with money laundering layering techniques or account compromise.",2
+claude-haiku-4-5-20251001,default,ALRT-0010,high_risk_corridor,160,160,60,0,end_turn,1.26,0.00046,"**Risk:** High
+
+**Typology:** Wire Transfer to High-Risk Jurisdiction
+
+**Rationale:** Outbound wire to Cyprus (a known higher-risk jurisdiction) with no documented business justification and no stated legitimate purpose represents elevated ML/TF exposure.",3
+claude-sonnet-5-5,low,ALRT-0001,structuring,224,224,131,0,end_turn,2.26,0.00176,"**Risk:** High
+
+**Typology:** Structuring (smurfing of cash deposits to evade CTR reporting)
+
+**Rationale:** Five sub-$10,000 cash deposits totaling about $46K across multiple branches in 5 days is a classic deliberate threshold-avoidance pattern, so it warrants escalation and SAR consideration pending review of customer profile and source of funds.",5
+claude-sonnet-5-5,low,ALRT-0002,rapid_movement,209,209,289,0,end_turn,5.0,0.00331,"**Risk:** High
+
+**Typology:** Rapid movement of funds (pass-through / layering) with possible shell-company or trade-based exposure via a high-risk jurisdiction (Panama)
+
+**Rationale:** A large incoming wire was moved offshore to Panama within 24 hours, returning the account to near zero, which is a classic pass-through pattern. The flagged total (167,043.23) is roughly double the 84,942 incoming wire cited in the narrative, which suggests the outbound activity exceeds the inbound funds and warrants review of TX-000093 and TX-000094 for the source and purpose.
+
+**Suggested next steps:** Review the customer's expected activity profile and KYC. Identify the originator and beneficiary and check for any link between them. Check for prior Panama-bound transfers. Escalate for SAR consideration if there is no plausible business rationale.",4
+claude-sonnet-5-5,low,ALRT-0003,high_risk_corridor,219,219,172,0,end_turn,2.29,0.00216,"**Risk:** Medium
+
+**Typology:** High-risk corridor transfers with unexplained purpose (potential layering or shell-company activity)
+
+**Rationale:** Three outbound wires totaling about CAD 81K to a listed high-risk jurisdiction (MT) with no stated business link meet the rule threshold, but the alert lacks customer profile, KYC, and historical-activity context that would justify escalating to high, so request a source-of-funds and purpose-of-payment review and check for structuring across the three transactions.",4
+claude-sonnet-5-5,low,ALRT-0004,large_cash,190,190,284,0,end_turn,3.06,0.00322,"**Risk:** Medium
+
+**Typology:** Large cash deposit inconsistent with expected activity (possible placement / cash structuring-adjacent)
+
+**Rationale:** A single domestic cash deposit of CAD 45,153 is about 3x the customer's expected monthly volume of 15,000 and exceeds the CAD 10,000 LCTR threshold, but with no cross-border element, no structuring pattern, and no other red flags in the alert, it warrants source-of-funds review and a KYC profile check rather than immediate escalation.
+
+**Suggested next steps:**
+- Confirm the LCTR was filed.
+- Request source-of-funds documentation.
+- Review the prior 90 days of account activity for other cash or pass-through behavior.
+- Escalate to high and consider an STR if the explanation is unsupported or the funds are quickly moved out.",5
+claude-sonnet-5-5,low,ALRT-0005,dormant_reactivation,203,203,192,0,end_turn,2.41,0.00233,"**Risk:** High
+
+**Typology:** Dormant account reactivation with potential layering or pass-through activity (cross-border transfer to a higher-risk jurisdiction)
+
+**Rationale:** A 14+ month dormant account suddenly moving about CAD 61.5K across two transactions to Cyprus, a jurisdiction associated with offshore and shell-company structures, is consistent with account takeover, mule use, or layering. Source of funds and the purpose of the transfer are unexplained, so escalate for enhanced due diligence and verify customer identity and the beneficiary.",5
+claude-sonnet-5-5,low,ALRT-0006,round_amounts,209,209,221,0,end_turn,2.72,0.00263,"**Risk:** Medium
+
+**Typology:** Possible trade-based or shell-company layering via round-dollar outbound wires with vague payment references (the pattern also overlaps with structuring and unsupported invoice payments).
+
+**Rationale:** Repeated round-figure US-to-NL wires totaling at least $50,000 with generic references like ""services"" and ""invoice"" suggest payments with no evident economic purpose. The alert shows no sanctions, high-risk jurisdiction (NL is lower risk), or prior-SAR indicators, so it merits analyst review of supporting invoices, the counterparty, and the customer's expected activity profile rather than immediate escalation.",5
+claude-sonnet-5-5,low,ALRT-0007,third_party_funding,214,214,209,0,end_turn,3.49,0.00252,"**Risk:** High
+
+**Typology:** Third-party funding / possible funnel account activity with layering (multiple unrelated remitters from a higher-risk jurisdiction, AE, consolidated and rapidly spent on a single large purchase). Possible straw-buyer or third-party-funded asset purchase.
+
+**Rationale:** Three unrelated third parties from AE funding a CAD ~35.8K account that is then drained by one large purchase suggests pooling of funds from undisclosed sources with no apparent economic link to the customer, which warrants escalation and an EDD review (source of funds, relationship to remitters, purchase details).",5
+claude-sonnet-5-5,low,ALRT-0008,structuring,220,220,148,0,end_turn,2.13,0.00192,"**Risk:** High
+
+**Typology:** Structuring (smurfing-style cash deposit splitting to evade the CAD 10,000 reporting threshold)
+
+**Rationale:** Four just-under-threshold cash deposits totaling CAD 35,568.64 across multiple branches within four days is a classic deliberate threshold-avoidance pattern, warranting escalation and STR consideration pending review of the customer's profile and source-of-funds.",4
+claude-sonnet-5-5,low,ALRT-0009,rapid_movement,209,209,272,0,end_turn,3.12,0.00314,"**Risk:** Medium
+
+**Typology:** Rapid movement of funds / pass-through (potential layering)
+
+**Rationale:** An incoming wire was moved out to Canada within 24 hours, leaving the account near zero, which is a classic pass-through pattern. However, the cross-border corridor (US→CA) is lower-risk, and the narrative gives no confirmed indicators such as structuring, high-risk jurisdictions, or a mismatch with the customer's profile, so it warrants analyst review of the customer's expected activity and the wire counterparties rather than immediate escalation.
+
+Note: the stated alert amount (47,186.70) doesn't match the 24,196 wire cited in the narrative, which likely reflects the combined value of the two transactions. Verify against TX-000111 and TX-000112 to confirm.",5
+claude-sonnet-5-5,low,ALRT-0010,high_risk_corridor,203,203,177,0,end_turn,2.81,0.00218,"**Risk:** Medium
+
+**Typology:** High-risk corridor / potential layering through offshore or shell-company jurisdiction (Cyprus)
+
+**Rationale:** A single ~$15.3K outbound wire to a listed high-risk corridor with no stated business purpose is a meaningful red flag, but the lack of pattern evidence (one transaction, no structuring, no adverse media or counterparty info) supports medium rather than high pending KYC review, counterparty identification, and a check of the customer's prior activity for similar flows.",5
+claude-sonnet-5-5,high,ALRT-0001,structuring,224,224,136,0,end_turn,3.52,0.00181,"**Risk:** High
+
+**Typology:** Structuring (cash deposits deliberately kept below the $10,000 CTR threshold, spread across multiple branches)
+
+**Rationale:** Five sub-$10K cash deposits totaling ~$46K within five days at different branches is a textbook structuring pattern that suggests deliberate evasion of reporting requirements, so it warrants escalation and a SAR review.",5
+claude-sonnet-5-5,high,ALRT-0002,rapid_movement,209,209,204,0,end_turn,3.06,0.00246,"**Risk:** High
+
+**Typology:** Rapid movement of funds / pass-through (layering) activity, with potential shell-company or nominee-account involvement, given the Panama destination.
+
+**Rationale:** An incoming wire was moved offshore to Panama (a jurisdiction with elevated secrecy and AML risk) within 24 hours and drained the account to near zero, a classic pass-through pattern with no evident economic purpose. Note also that the alert amount (167,043.23) is roughly double the cited incoming wire (84,942), which suggests the two transactions are an in/out pair and should be reconciled during review.",5
+claude-sonnet-5-5,high,ALRT-0003,high_risk_corridor,219,219,166,0,end_turn,4.93,0.0021,"**Risk:** Medium
+
+**Typology:** High-risk jurisdiction transfers with unexplained purpose (possible layering or funnel activity)
+
+**Rationale:** Three outbound wires totaling about CAD 81K went to a high-risk-list corridor (MT) with no stated business link, which warrants enhanced due diligence and a request for source-of-funds and purpose documentation. The alert lacks customer profile, expected activity, and counterparty details that would justify escalating to high or closing as low.",4
+claude-sonnet-5-5,high,ALRT-0004,large_cash,190,190,191,0,end_turn,2.33,0.00229,"**Risk:** Medium
+
+**Typology:** Large cash deposit inconsistent with expected activity (possible placement / structuring-adjacent; cash-intensive business or unexplained source of funds)
+
+**Rationale:** A single domestic CAD 45,153 cash deposit is about 3x the customer's expected monthly volume (15,000) and exceeds the CAD 10,000 LCTR threshold, but the alert shows no cross-border element, no evidence of structuring, and no other red flags, so it warrants source-of-funds review and KYC profile validation before any escalation.",4
+claude-sonnet-5-5,high,ALRT-0005,dormant_reactivation,203,203,180,0,end_turn,2.42,0.00221,"**Risk:** High
+
+**Typology:** Dormant account reactivation with rapid cross-border movement of funds (potential layering / account takeover / mule activity)
+
+**Rationale:** A 14+ month dormant account suddenly moving ~CAD 61.5K to Cyprus, a jurisdiction commonly associated with offshore structuring and layering, across multiple transactions, is a strong red-flag combination that warrants escalation, with immediate review of the source of funds, recent KYC/contact-detail changes, and the destination beneficiary.",5
+claude-sonnet-5-5,high,ALRT-0006,round_amounts,209,209,190,0,end_turn,2.63,0.00232,"**Risk:** Medium
+
+**Typology:** Suspected trade-based or services-based layering (possible shell/pass-through activity)
+
+**Rationale:** Repeated round-figure ($50K) outbound wires from the US to the Netherlands with generic references (""services"", ""invoice"") and no supporting detail point to possible disguised fund movement. However, the alert lacks customer profile, expected-activity baseline, and counterparty data, so escalate for enhanced review (request invoices/contracts, check beneficiary ownership) rather than treating it as confirmed suspicious activity.",4
+claude-sonnet-5-5,high,ALRT-0007,third_party_funding,214,214,282,0,end_turn,3.68,0.00325,"**Risk:** High
+
+**Typology:** Third-party funding / structuring-style layering (possible money mule or funnel account activity) with cross-border inflows from a higher-risk jurisdiction (AE), ending in a single large purchase, which is a pattern consistent with value conversion or integration.
+
+**Rationale:** Three unrelated third parties from AE funded the account with about CAD 35.8K, which was then quickly spent on one large purchase. This suggests pooled funds with no apparent legitimate relationship, rapid movement, and a likely attempt to obscure the true source and beneficiary.
+
+**Suggested next steps (brief):** Identify the relationship between the funders and the customer, review the purchase type and counterparty, check for similar prior activity on CUST-0030, and consider an EDD review and STR/SAR assessment if no credible explanation is found.",4
+claude-sonnet-5-5,high,ALRT-0008,structuring,220,220,177,0,end_turn,2.43,0.00221,"**Risk:** High
+
+**Typology:** Structuring (smurfing-style cash deposit splitting to evade the CAD 10,000 Large Cash Transaction Report threshold)
+
+**Rationale:** Four sub-threshold cash deposits totaling CAD 35,568.64 across different branches within 4 days is a classic deliberate-avoidance pattern, and the aggregate exceeds the reporting threshold. Under FINTRAC's 24-hour rule, related deposits may need aggregation, and an STR should be considered.",5
+claude-sonnet-5-5,high,ALRT-0009,rapid_movement,209,209,246,0,end_turn,2.85,0.00288,"**Risk:** Medium
+
+**Typology:** Rapid movement of funds (pass-through / flow-through activity), with possible layering
+
+**Rationale:** An incoming wire was moved out to Canada within 24 hours and left the account near zero, which is a classic pass-through pattern. However, the alert shows no other aggravating factors such as high-risk jurisdictions, structuring, or adverse media, so it needs analyst review of the customer's profile, expected activity, and the counterparty relationship before escalation.
+
+**Note:** The alert amount (47,186.70) doesn't match the narrative's incoming wire (24,196). This is likely the combined total of the two transactions (TX-000111 and TX-000112), but the difference should be reconciled during review.",5
+claude-sonnet-5-5,high,ALRT-0010,high_risk_corridor,203,203,191,0,end_turn,2.68,0.00232,"**Risk:** Medium
+
+**Typology:** High-risk corridor / potential layering through offshore or shell-company jurisdiction (Cyprus)
+
+**Rationale:** A single USD 15.3K outbound wire to a list-designated high-risk corridor (CY) with no documented business purpose warrants enhanced review, but the isolated transaction, modest amount, and lack of other red flags (structuring, rapid in/out movement, adverse media) keep it short of high pending KYC/purpose-of-payment confirmation and a check of the customer's prior activity to the corridor.",5
+claude-opus-5-5,default,ALRT-0001,structuring,224,224,198,58,end_turn,4.63,0.00486,"**Risk:** high
+
+**Typology:** Structuring (cash deposits split to evade Currency Transaction Report filing)
+
+**Rationale:** Five cash deposits averaging about $9,207, each just under the $10,000 CTR threshold, made at different branches within 5 days and totaling $46,034.67, is the textbook pattern of deliberately avoiding reporting, so this warrants escalation for SAR consideration.",5
+claude-opus-5-5,default,ALRT-0002,rapid_movement,209,209,295,94,end_turn,3.93,0.00674,"**Risk:** high
+
+**Typology:** Rapid movement of funds / pass-through (layering) to a higher-risk jurisdiction
+
+**Rationale:** An incoming wire was moved out to Panama within 24 hours and the balance returned to near zero, a classic pass-through layering pattern to a jurisdiction associated with offshore secrecy. The alert amount (167,043.23) doesn't match the narrative amount (84,942), so check both transactions (TX-000093/094) against the customer's KYC profile, expected activity, and beneficiary details before deciding whether to escalate for SAR consideration.",5
+claude-opus-5-5,default,ALRT-0003,high_risk_corridor,219,219,313,173,end_turn,4.15,0.00714,"**Risk:** High
+
+**Typology:** High-risk jurisdiction transfers / possible layering via cross-border wires
+
+**Rationale:** About CAD 81K went out in three wires to Malta, a corridor on the high-risk list, with no stated business link. That combination of size, repetition and missing economic purpose warrants escalation for enhanced due diligence on the customer's relationship to the beneficiary and the source of funds.",5
+claude-opus-5-5,default,ALRT-0004,large_cash,190,190,280,135,end_turn,4.46,0.00636,"**Risk:** Medium
+
+**Typology:** Unusual cash activity inconsistent with customer profile (possible placement stage of money laundering)
+
+**Rationale:** A single domestic cash deposit of CAD 45,153 is about three times the customer's expected monthly volume, which needs source-of-funds review, but there are no aggravating factors such as structuring, cross-border movement, high-risk jurisdictions, or rapid outflows.",5
+claude-opus-5-5,default,ALRT-0005,dormant_reactivation,203,203,276,130,end_turn,4.26,0.00633,"**Risk:** High
+
+**Typology:** Dormant account reactivation / possible account takeover or money-mule layering via an offshore financial centre.
+
+**Rationale:** An account dormant for over 14 months abruptly moved about CAD 61.5K in two transactions to Cyprus, a jurisdiction often used for layering, which fits takeover or mule use and warrants a source-of-funds and customer-contact review before any further outbound transfers.",5
+claude-opus-5-5,default,ALRT-0006,round_amounts,209,209,308,120,end_turn,3.86,0.007,"**Risk:** Medium
+
+**Typology:** Possible layering or sham invoicing (trade or service-based money laundering)
+
+**Rationale:** Repeated round-figure $50,000 outbound wires to the Netherlands with generic references like ""services"" and ""invoice"" and no visible underlying commercial documentation are consistent with fictitious-invoice layering, but the low-risk destination and absence of other red flags (adverse media, high-risk counterparties, rapid in/out movement) support enhanced review and requesting supporting invoices/contracts rather than immediate escalation.",5
+claude-opus-5-5,default,ALRT-0007,third_party_funding,214,214,406,199,end_turn,5.03,0.00898,"**Risk:** high
+
+**Typology:** Third-party funding / funnel account (aggregation followed by integration via a large purchase)
+
+**Rationale:** Three unrelated third parties funded the account from AE with about CAD 35.8k, and the money was then consolidated into a single large purchase. This pattern of pooling funds from multiple parties with no apparent connection to the customer, then rapidly spending them, suggests the account is being used to obscure the true source and owner of the funds. It warrants an EDD/KYC review of the funders' relationships to CUST-0030 and of the purchase's beneficiary, and consideration of an STR.",5
+claude-opus-5-5,default,ALRT-0008,structuring,220,220,474,135,end_turn,5.56,0.01036,"**Risk:** High
+
+**Typology:** Structuring (cash deposits split to stay under the reporting threshold, spread across branches)
+
+**Rationale:** Four cash deposits totaling CAD 35,568.64, averaging about CAD 8,892 each, were made just under the CAD 10,000 Large Cash Transaction Report threshold at different branches over 4 days. Spreading them across days and locations appears designed to avoid FINTRAC's 24-hour aggregation rule.
+
+**Next steps:**
+- Pull the KYC profile and expected activity for CUST-0025 to check whether this cash volume fits the customer's stated business.
+- Review the deposit timestamps for TX-000107 to TX-000110. Check whether any two fall within 24 hours, which would trigger an aggregated report that may have been missed.
+- Look back 90 to 180 days for earlier sub-threshold patterns and for where the funds went next.
+- If no legitimate explanation is found, escalate for a possible Suspicious Transaction Report.",5
+claude-opus-5-5,default,ALRT-0009,rapid_movement,209,209,326,144,end_turn,4.99,0.00736,"**Risk:** medium
+
+**Typology:** Rapid movement of funds (pass-through / layering)
+
+**Rationale:** An incoming wire of about $24K left for Canada within 24 hours and the balance returned to near zero, a classic pass-through pattern. The destination is low-risk and the amount is moderate, so this calls for review of the source and beneficiary relationship rather than immediate escalation. The alert amount ($47,186.70) also doesn't match the narrative's $24,196, which should be reconciled against TX-000111 and TX-000112.",5
+claude-opus-5-5,default,ALRT-0010,high_risk_corridor,203,203,326,130,end_turn,4.71,0.00733,"**Risk:** Medium
+
+**Typology:** High-risk jurisdiction / offshore corridor transfer (possible early-stage layering)
+
+**Rationale:** A single ~$15.3K outbound wire to Cyprus, a listed high-risk corridor, with no documented business purpose warrants enhanced review (customer profile, beneficiary, source of funds). But one moderate-value transaction with no structuring, velocity, or adverse indicators doesn't yet justify high risk. Note that the narrative says ""wires"" (plural) while only one transaction ID is attached, so check for related transfers.",5

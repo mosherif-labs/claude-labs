@@ -62,9 +62,9 @@ Source: [Claude Certified Developer – Foundations Exam Guide (PDF)](https://ev
 
 | # | Task statement | Weight | Status | Evidence / day covered |
 |---|---|---|---|---|
-| **5.1** | **LLM Fundamentals**: Basic understanding of LLMs (tokens, context windows, sampling, non-determinism, next-token generation), model options (fast mode, extended thinking, adaptive thinking, effort levels), and fundamental prompting techniques (zero-shot, single-shot, multi-shot). | 5.2% | `red` | |
+| **5.1** | **LLM Fundamentals**: Basic understanding of LLMs (tokens, context windows, sampling, non-determinism, next-token generation), model options (fast mode, extended thinking, adaptive thinking, effort levels), and fundamental prompting techniques (zero-shot, single-shot, multi-shot). | 5.2% | `amber` | |
 | **5.2** | **Technical Fundamentals**: Foundational technical concepts supporting AI application development, including basic engineering practices (integrating with SDKs that wrap REST APIs, websockets). | 6.1% | `red` | |
-| **5.3** | **Model Selection and Tradeoffs**: Claude model capabilities (Opus vs. Sonnet vs. Haiku use cases, adaptive thinking support), tradeoffs across quality/latency/cost parameters, and breaking behavior changes across model releases when selecting models for tasks. | 2.7% | `red` | |
+| **5.3** | **Model Selection and Tradeoffs**: Claude model capabilities (Opus vs. Sonnet vs. Haiku use cases, adaptive thinking support), tradeoffs across quality/latency/cost parameters, and breaking behavior changes across model releases when selecting models for tasks. | 2.7% | `amber` | |
 | **5.4** | **Cost and Token Management**: Token budgeting and cost management techniques for Claude applications, including token usage tracking, cost modeling, and caching techniques (prompt caching, cache check-pointing) for cost optimization. | 2.8% | `red` | |
 
 ## Domain 6: Prompt and Context Engineering (11.0%)
